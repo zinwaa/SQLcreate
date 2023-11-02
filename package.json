@@ -1,0 +1,23 @@
+{
+  "name": "sqlcreate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "codemirror": "^6.0.1",
+    "element-resize-detector": "^1.2.4",
+    "mitt": "^3.0.1",
+    "nuxt": "^3.7.4",
+    "vue": "^3.3.4",
+    "vue-codemirror": "^4.0.6",
+    "vue-demi": "^0.14.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  }
+}
