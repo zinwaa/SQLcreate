@@ -1,7 +1,6 @@
 <script>
 import MenuItem from "./menuitem.vue";
 import { reactive, ref } from "vue";
-import UserNameIsShow from "./UserNameIsShow.vue";
 import Hr from "./hr.vue";
 
 export default {
@@ -9,7 +8,7 @@ export default {
     let isactive = ref(true)
     let updataItem = ref("代码生成")
 
-    const MenuLists = reactive(["代码生成","待开发中"
+    const MenuLists = reactive(["代码生成"
     //  "表大全",
     //   "字段大全"
     ]);
@@ -20,7 +19,7 @@ export default {
     }
   },
   components: {
-    MenuItem, UserNameIsShow,
+    MenuItem,
     Hr
 },
 }
@@ -33,7 +32,6 @@ export default {
         <MenuItem :menu="item" :class="{ active: item === updataItem }" @isActive="updataItem = item" />
       </li>
     </ul>
-    <!-- <UserNameIsShow /> -->
   </div>
   <Hr />
 </template>
