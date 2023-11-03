@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="foldTitle"  @click="isShow">
-            <span><img src="./icons/triangular.png" alt="" :class="{ isRevolve: show }"></span>
+            <span><img src="./icons/triangular.svg" alt="" :class="{ isRevolve: show }"></span>
             <div class="title">
                 建表语句
             </div>

@@ -10,7 +10,7 @@ var tableItem = {
     tableComment: { title: "表注释", text: "描述表的中文名称、作用等", requrid: false, default: "", isText: "text", key: "tableComment" },
     // generateNumber: { title: "生成条数", text: "", requrid: true, default: "20", isText: "text", key: "generateNumber" },
 }
-var fleidList = {
+var FList = {
     fleidName: { title: "字段名", requrid: false, default: "username", text: "请输入字段名", isText: "text", key: "fleidName" },
     fleidType: { title: "字段类型", requrid: true, default: "", text: "请输入字段类型", isText: "text", key: "fleidType" },
     fleidDefault: { title: "默认值", requrid: false, default: "", text: "要和字段类型匹配", isText: "text", key: "fleidDefault" },
@@ -41,6 +41,6 @@ var example = {
         placeholder: '请输入表的列名，多个列以【英文或中文逗号】分隔:'
     }
 }
-export{
-    inputItem, tableItem, fleidList, example
+export {
+    inputItem, tableItem, FList, example
 }

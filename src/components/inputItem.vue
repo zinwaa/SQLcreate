@@ -6,7 +6,7 @@
         <InputBox type="checkbox" :id="item.key" :checked="item.defaultValue" v-else />
     </div>
     <div :class="item.key" v-else>
-        <span><img src="./icons/triangular.png" alt="" :class="{ isRevolve: show }"></span>
+        <span><img src="./icons/triangular.svg" alt="" :class="{ isRevolve: show }"></span>
         <label>{{ item.itemName }}</label>
         <InputBox type="text" :id="item.key" :placeholder="item.placeholderText" :value="item.defaultValue"
             @click.stop=""/>

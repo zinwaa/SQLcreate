@@ -40,6 +40,7 @@ import elementResizeDetectorMaker from "element-resize-detector";
 import { reactive, ref, watch, onMounted, getCurrentInstance, readonly } from 'vue';
 import InputWin from './window/inputWin.vue';
 import tip from './window/tip.vue';
+import {FList} from '../assets/obj'
 export default {
     components: {
         Menu, Box, fleidItem,
@@ -50,16 +51,7 @@ export default {
     props: {},
     setup(props, content) {
         const instance = getCurrentInstance();
-        const fleidList = readonly({
-            fleidName: { title: "字段名", requrid: false, default: "username", text: "请输入字段名", isText: "text", key: "fleidName" },
-            fleidType: { title: "字段类型", requrid: true, default: "", text: "请输入字段类型", isText: "text", key: "fleidType" },
-            fleidDefault: { title: "默认值", requrid: false, default: "", text: "要和字段类型匹配", isText: "text", key: "fleidDefault" },
-            fleidComment: { title: "注释", requrid: false, default: "", text: "用中文描述名称、作用等", isText: "text", key: "fleidComment" },
-            fleidOnUpdata: { title: "onUpdata", requrid: false, default: "", text: "字段更新动作", isText: "text", key: "fleidOnUpdata" },
-            fleidIsEmpty: { title: "非空", requrid: false, default: false, isText: "btn", key: "fleidIsEmpty", text: "" },
-            fleidPrimaryKey: { title: "主键", requrid: false, default: false, isText: "btn", key: "fleidPrimaryKey", text: "" },
-            fleidAddition: { title: "自增", requrid: false, default: false, isText: "btn", key: "fleidAddition", text: "" },
-        })
+        const fleidList = readonly(FList)
         //字段配置条列表
         let List = reactive([])
         //删除一条字段配置

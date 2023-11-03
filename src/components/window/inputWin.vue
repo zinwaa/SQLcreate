@@ -41,7 +41,6 @@ import close from './close.vue'
 import { getCurrentInstance, ref } from 'vue';
 import Btn from '../btn.vue';
 import { example } from '../../assets/obj';
-import object from 'element-resize-detector/src/detection-strategy/object';
 export default {
     components: { WindowBac, close, Btn },
     props: {},
@@ -83,16 +82,16 @@ export default {
                     const list = text.split(/,|，/gi)
                     let data = []
                     for (let i = 0; i < list.length; i++) {
-                        data.push({'fieldName':list[i]})
+                        data.push({ 'fieldName': list[i] })
                     }
-                    $bus.emit('fieldList',data)
+                    $bus.emit('fieldList', data)
                 } else {
-                    const obj = eval('('+'{'+text+'}'+')')
-                    $bus.emit('tableList',obj)
+                    const obj = eval('(' + '{' + text + '}' + ')')
+                    $bus.emit('tableList', obj)
                 }
                 show.value = false
             }
-            
+
         }
 
         return {
