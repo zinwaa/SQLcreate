@@ -12,7 +12,7 @@
                         :id="i" />
                 </div>
                 <AddFleid />
-                <CreateMenu :list="List"/>
+                <CreateMenu :list="List" />
             </Box>
         </div>
         <div class="box">
@@ -40,13 +40,13 @@ import elementResizeDetectorMaker from "element-resize-detector";
 import { reactive, ref, watch, onMounted, getCurrentInstance, readonly } from 'vue';
 import InputWin from './window/inputWin.vue';
 import tip from './window/tip.vue';
-import {FList} from '../assets/obj'
+import { FList } from '../assets/obj'
 export default {
     components: {
         Menu, Box, fleidItem,
         InputMenu, FleidItem, AddFleid,
         tableItem, CreateMenu, Result,
-        InputWin,tip
+        InputWin, tip
     },
     props: {},
     setup(props, content) {
@@ -56,6 +56,30 @@ export default {
         let List = reactive([])
         //删除一条字段配置
         const deleteFleid = (data) => {
+            List.splice(0,List.length)
+            let doms = {
+                inputDom: document.getElementsByTagName("input"),
+                boxDom: document.getElementsByClassName("fleidBox")[0].children,
+            }
+            let temp = JSON.parse(JSON.stringify(fleidList))
+            for (let i = 0; i < doms.boxDom.length; i++) {
+                let id = ''
+                let value = ''
+                for (var j = 3; j < doms.inputDom.length; j++) {
+                    if (Math.trunc((j - 3) / 8) == i) {
+                        if (doms.inputDom[j].type == "text") {
+                            id = doms.inputDom[j].id
+                            value = doms.inputDom[j].value
+                        }
+                        else {
+                            id = doms.inputDom[j].id
+                            value = doms.inputDom[j].checked
+                        }
+                        temp[id].default= value
+                    }
+                }
+                List.push(temp)
+            }
             List.splice(data, 1)
         }
         const fieldShow = ref(true)

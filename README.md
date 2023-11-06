@@ -1,29 +1,50 @@
 # SQLCreate
 
-这是一个快速生成SQL建表语句的小工具
+这是一个快速生成SQL建表语句的小工具，通过配置可视化表单生成SQL生成语句，能大大提高工作效率。
 
-## Recommended IDE Setup
+## 使用方法
+1. 启动项目后或构建项目后通过 `index.html` 文件进入网页。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+   [index.html](./src/assets/readmePic/主页.png)
 
-## Customize configuration
+2. 通过 `智能导入` 、`导入多条字段`和 `新增字段` 等方式生成多条字段配置条。
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+   
 
-## Project Setup
+3. 通过配置`字段配置条` 进一步完善表单数据。
+
+   [field](./src/assets/readmePic/字段配置.png)
+
+4. 点击一键生成即可在输出结果框内获得SQL建表语句。
+
+## 工程初始化
+
+运行以下代码
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 项目热启动
+
+运行以下代码
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 项目构建
+
+运行以下代码
 
 ```sh
 npm run build
 ```
+
+
+
+## 项目目标
+
+​	本项目仅为 demo 版本，目前只能生成SQL建表语句。后续将持续完善，加入生成SQL插入语句功能，实现快速生成多条随机插入语句以测试数据库功能实现。
+
+​	且本项目原为包括保存表单数据等十分丰富的功能的联机版本，是本人的毕业设计。但因功能过多，反而显得过于臃肿，项目搭建不易实现，于是有了此 “单机版” 。以轻量化实现最主要的基础功能。
