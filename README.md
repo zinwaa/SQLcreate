@@ -5,7 +5,7 @@
 ## 使用方法
 1. 启动项目后或构建项目后通过 `index.html` 文件进入网页。
 
-   [index.html](./src/assets/readmePic/主页.png)
+   ![index.html](./src/assets/readmePic/主页.png)
 
 2. 通过 `智能导入` 、`导入多条字段`和 `新增字段` 等方式生成多条字段配置条。
 
@@ -13,7 +13,7 @@
 
 3. 通过配置`字段配置条` 进一步完善表单数据。
 
-   [field](./src/assets/readmePic/字段配置.png)
+   ![field](./src/assets/readmePic/字段配置.png)
 
 4. 点击一键生成即可在输出结果框内获得SQL建表语句。
 
